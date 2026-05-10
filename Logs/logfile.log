@@ -1,0 +1,6 @@
+080526 10:57:42 AM: INFO: test_login: test_login01: Test CASE 001
+080526 10:57:42 AM: INFO: test_login: test_login01: test starting
+080526 10:57:42 AM: INFO: test_login: test_login01: entered username
+080526 10:57:42 AM: INFO: test_login: test_login01: entered Password
+080526 10:57:42 AM: INFO: test_login: test_login01: Click the login button
+080526 10:57:52 AM: CRITICAL: test_login: test_login01: test fail
