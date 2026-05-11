@@ -5,7 +5,7 @@ import time
 from selenium import webdriver
 import pytest
 
-git initfrom selenium.webdriver.common.by import By
+from selenium.webdriver.common.by import By
 from pageobject.login_page import Login
 from pageobject.dashboard_page import Dashboard
 #for logs implement
