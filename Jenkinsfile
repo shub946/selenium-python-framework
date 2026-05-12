@@ -27,7 +27,7 @@ pipeline {
                     curl -H "Content-Type: text/xml" ^
                          -u %JIRA_USER%:%JIRA_TOKEN% ^
                          --data @report.xml ^
-                         "https://codesite1.atlassian.net/rest/raven/1.0/import/execution/junit?projectKey=XSP"
+                         "https://xray.cloud.getxray.app/api/v2/import/execution/junit?projectKey=XSP"
                     '''
                 }
             }
