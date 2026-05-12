@@ -17,7 +17,19 @@ pipeline {
 
         stage('Upload Results to XRAY') {
             steps {
-                echo 'XRAY upload successful'
+                withCredentials([usernamePassword(
+                    credentialsId: 'jira-token',
+                    usernameVariable: 'JIRA_USER',
+                    passwordVariable: 'JIRA_TOKEN'
+                )]) {
+
+                    bat '''
+                    curl -H "Content-Type: text/xml" ^
+                         -u %JIRA_USER%:%JIRA_TOKEN% ^
+                         --data @report.xml ^
+                         "https://codesite1.atlassian.net/rest/raven/1.0/import/execution/junit?projectKey=XSP"
+                    '''
+                }
             }
         }
     }
