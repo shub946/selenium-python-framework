@@ -11,7 +11,7 @@ config.read("Utilities/input.properties")
 def setup(request):
     request.cls.driver=webdriver.Chrome()
     request.cls.driver.get(config.get("url","base_url"))
-    time.sleep(10)
+    time.sleep(20)
     request.cls.driver.maximize_window()
     yield
     request.cls.driver.quit()

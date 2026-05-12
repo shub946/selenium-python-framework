@@ -1,3 +1,5 @@
+import time
+
 from selenium.webdriver.common.by import By
 
 
@@ -11,8 +13,10 @@ class Login:
         self.Blank_username= "//span[@class='css-1rjegds']"
         self.Blank_password = "//span[@id='password-error']"
         self.Blank_username_password="//span[@id='username-error']"
+        time.sleep(20)
     def input_name(self, username):
         self.driver.find_element(By.XPATH, self.username).send_keys(username)
+        time.sleep(20)
     def input_pass(self,password):
         self.driver.find_element(By.XPATH, self.password).send_keys(password)
     def click(self):
