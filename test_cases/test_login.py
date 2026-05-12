@@ -69,7 +69,7 @@ class Test_Login_page(logclass):
     def test_login05(self):
             lg = Login(self.driver)
             DB = Dashboard(self.driver)
-            lg.input_name("qauser001")
+            lg.input_name("qauser0011")
             lg.input_pass("Password1")
             lg.click()
             time.sleep(10)
