@@ -28,14 +28,14 @@ pipeline {
                     curl -H "Content-Type: application/json" ^
                          -X POST ^
                          --data "{\\"client_id\\": \\"%XRAY_CLIENT_ID%\\", \\"client_secret\\": \\"%XRAY_CLIENT_SECRET%\\"}" ^
-                         https://xray.cloud.getxray.app/api/v2/authenticate > token.txt
+                         https://eu.xray.cloud.getxray.app/api/v2/authenticate > token.txt
 
                     set /p XRAY_TOKEN=<token.txt
 
                     curl -H "Content-Type: text/xml" ^
                          -H "Authorization: Bearer %XRAY_TOKEN%" ^
                          --data @report.xml ^
-                         "https://xray.cloud.getxray.app/api/v2/import/execution/junit?projectKey=XSP"
+                         "https://eu.xray.cloud.getxray.app/api/v2/import/execution/junit?projectKey=XSP"
                     '''
                 }
             }
